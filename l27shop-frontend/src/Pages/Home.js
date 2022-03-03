@@ -6,6 +6,8 @@ import Col from 'react-bootstrap/Col';
 import { Routes, Route, Link } from "react-router-dom";
 
 import Footer from '../Components/Footer';
+import ItemCard from '../Components/ItemCard/ItemCard';
+import MyCardGroup from '../Components/CardGroup/MyCardGroup';
 
 function Home() {
   return (
@@ -27,7 +29,19 @@ function Home() {
       </Alert>
       <Button variant="danger">Click me This is Home</Button>
 
-      <Footer pageName="hell" number="5"/>
+      {/* This is a test for MyCardGroup Compnents and ItemCard */}
+      <Row>
+        <Col><ItemCard itemName="Product1" itemPrice="$10" itemImage="https://i.picsum.photos/id/257/200/200.jpg?hmac=k0qf_n518If39xOB7qmdqgZZNQ38WdbfQXdF30TSPCw" /></Col>
+        <Col><ItemCard itemName="Product1" itemPrice="$10" itemImage="https://i.picsum.photos/id/257/200/200.jpg?hmac=k0qf_n518If39xOB7qmdqgZZNQ38WdbfQXdF30TSPCw" /></Col>
+        <Col><ItemCard itemName="Product1" itemPrice="$10" itemImage="https://i.picsum.photos/id/257/200/200.jpg?hmac=k0qf_n518If39xOB7qmdqgZZNQ38WdbfQXdF30TSPCw" /></Col>
+      </Row>
+      <Container>
+      <MyCardGroup />
+      </Container>
+      
+      
+      
+      {/* <Footer pageName="hell" number="5"/> */}
     </Container>
   );
 }
